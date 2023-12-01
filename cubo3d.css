@@ -1,0 +1,228 @@
+
+  .contenedor {
+        -webkit-perspective: 90vmin;
+        perspective: 90vmin;
+        perspective-origin: 50% 50%;
+        display: flex;
+        /*
+        background: rgb(244, 248, 243);
+        background: linear-gradient(0deg, rgba(36,147,14,0.9429971817828694) 0%, rgba(38,129,36,1) 29%, rgba(155,247,163,1) 100%); */
+        height: 100%;
+        min-height: 100%;
+        margin: 0 auto; 
+    }
+   
+  .cubo, .cubo .cara, .cubo .cara-fondo {
+      height: 45.4vmin ;
+      width: 45.4vmin ;
+  }
+
+
+  .cubo {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+  
+      -webkit-transform: rotateX(90deg) rotateY(0deg);
+      transform: rotateX( 90deg ) rotateY(0deg );
+      margin: 25dvh auto;
+     
+      -webkit-animation: giro 20s infinite linear;
+      animation: giro360 20s infinite linear; 
+  }
+  
+  .cubo .cara {
+      display: flex;
+      margin: 0 auto;
+      position: absolute;
+      border: 0px solid #fdf9f9;
+      border-radius: 50%;
+      align-items: center;
+      vertical-align: middle;
+    
+  }
+  
+  .cubo .cara img {
+      border-radius: 5%;
+      padding: .4vmin;
+      overflow: hidden;
+      max-width: 45vmin ;
+      max-height: 45vmin ;
+      width: 45vmin ;
+      height: 45vmin ;
+  }
+  
+
+  .cubo .cara .tapiz {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 5%;
+    padding: .8vmin;
+    overflow: hidden;
+    max-width: 40vmin ;
+    max-height: 40vmin ;
+    width: 40vmin ;
+    height: 40vmin ;
+
+    align-content: center;
+    align-items: center;
+    font-size: small; 
+    text-align: justify; 
+
+    background-color: rgb(95, 101, 101);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(120deg,
+    rgba(255,255,255, .25),
+    rgba(255,255,255, .75), 70%,
+    rgba(255,255,255, .25));
+    
+}
+
+.cubo .cara .tapiz form {
+    font-size: 2vmin;
+ 
+}
+
+  @supports(object-fit: contain){
+    .cubo .cara img{
+      object-fit: contain;
+      object-position: center center;
+      
+    }
+}
+  .cubo .cara .txt {
+    position: absolute;
+    height: 75%;
+    top: 30;
+    left: 10;
+    font-size: 4vmin ;
+    text-shadow: 10px 1px 11px #09090a;
+
+    -webkit-text-stroke: .2px rgb(243, 235, 235);
+    color: rgb(219, 236, 132);
+   
+    
+}
+
+.cubo .cara .txt1 {
+    position: absolute;
+    height: 60%;
+    top: 42;
+    left: 10;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vmin ;
+    color: rgb(239, 245, 245);
+    text-shadow: 10px 1px 11px #09090a;
+}
+
+  .cubo .cara-fondo{
+      position: absolute;
+      border: 1px solid #f5eded;
+      border-radius: 19px;
+
+      background-color: rgba(255,255,255,.255);
+      backdrop-filter: blur(5px);
+  
+  }
+  
+  /*Cara frontal*/
+  .cubo .cara:nth-child(1) {
+      -webkit-transform: translateZ(25.5vmin);
+      transform: translateZ(25.5vmin);
+  }
+  /*Cara posterior*/
+  .cubo .cara:nth-child(2) {
+      -webkit-transform: rotateY(180deg) translateZ(25vmin);
+      transform: rotateY(180deg) translateZ(25.5vmin);
+  }
+  /*Cara izquierda*/
+  .cubo .cara:nth-child(3) {
+      -webkit-transform: rotateY(-90deg) translateZ(25vmin);
+      transform: rotateY(-90deg) translateZ(25.5vmin);
+  }
+  /*Cara derecha*/
+  .cubo .cara:nth-child(4) {
+      -webkit-transform: rotateY(90deg) translateZ(25vmin);
+      transform: rotateY(90deg) translateZ(25.5vmin);
+  }
+  /*Cara superior*/
+  .cubo .cara:nth-child(5) {
+      -webkit-transform: rotateX(90deg) translateZ(25vmin);
+      transform: rotateX(90deg) translateZ(25.5vmin);
+  }
+  /*Cara inferior*/
+  .cubo .cara:nth-child(6) {
+      -webkit-transform: rotateX(-90deg) translateZ(25vmin);
+      transform: rotateX(-90deg) translateZ(25.5vmin);
+  }
+  
+  
+  /************Caras posteriores*************/
+  /*Cara frontal*/
+  .cubo .cara-fondo:nth-child(7) {
+      -webkit-transform: translateZ(25vmin);
+      transform: translateZ(25vmin);
+  }
+  /*Cara posterior*/
+  .cubo .cara-fondo:nth-child(8) {
+      -webkit-transform: rotateY(180deg) translateZ(25vmin);
+      transform: rotateY(180deg) translateZ(25vmin);
+  }
+  /*Cara izquierda*/
+  .cubo .cara-fondo:nth-child(9) {
+      -webkit-transform: rotateY(-90deg) translateZ(25vmin);
+      transform: rotateY(-90deg) translateZ(25vmin);
+  }
+  /*Cara derecha*/
+  .cubo .cara-fondo:nth-child(10) {
+      -webkit-transform: rotateY(90deg) translateZ(149px);
+      transform: rotateY(90deg) translateZ(25vmin);
+  }
+  /*Cara superior*/
+  .cubo .cara-fondo:nth-child(11) {
+      -webkit-transform: rotateX(90deg) translateZ(25vmin);
+      transform: rotateX(90deg) translateZ(25vmin);
+  }
+  /*Cara inferior*/
+  .cubo .cara-fondo:nth-child(12) {
+      -webkit-transform: rotateX(-90deg) translateZ(25vmin);
+      transform: rotateX(-90deg) translateZ(25vmin);
+  }
+  
+  /*Caras interiores para formar una cruz en el centro*/
+  .cubo .cara-fondo:nth-child(13) {
+      -webkit-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+  }
+  
+  .cubo .cara-fondo:nth-child(14) {
+      -webkit-transform: rotateY(90deg);
+      transform: rotateY(90deg);
+  }
+  
+  .cubo .cara-fondo:nth-child(15) {
+      -webkit-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+  }
+  
+  @-webkit-keyframes giro {
+      0% { -webkit-transform: rotateX(-45deg) rotateY(0deg); }
+      50% { -webkit-transform: rotateX(45deg) rotateY(360deg); }
+      100% { -webkit-transform: rotateX(-45deg) rotateY(720deg); }
+  }
+  
+  @keyframes giro {
+      0% { transform: rotateX(-5deg) rotateY(0deg); }
+      50% { transform: rotateX(5deg) rotateY(360deg); }
+      100% { transform: rotateX(5deg) rotateY(720deg); }
+  }
+  
+  @-webkit-keyframes giro360 {
+      0% { -webkit-transform: rotateX(  0deg) rotateY(  0deg); }
+    100% { -webkit-transform: rotateX(360deg) rotateY(360deg); }
+  }
+  
+  @keyframes giro360 {
+      0% { transform: rotateX(  0deg) rotateY(  0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
