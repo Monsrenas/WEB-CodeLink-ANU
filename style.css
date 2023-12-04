@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=REM:ital,wght@0,800;1,800&family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lora:wght@700&family=REM:ital,wght@0,800;1,800&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap');
 ul {
     height: 100px;
     margin: 0 auto;
     align-items: center;
     display: flex;
     list-style:none;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: bold;
     font-size: 1.4em;    
     color: white;
-    text-shadow: 0 0 0.2em #388ea7, 0 0 0.2em #388ea7,
+/*    text-shadow: 0 0 0.2em #388ea7, 0 0 0.2em #388ea7,
 		0 0 0.2em #388ea7;
-/*background-color: rgba(255, 255, 255, 0.2);*/
+background-color: rgba(255, 255, 255, 0.2);*/
 }
 
 li {
@@ -21,7 +21,6 @@ li {
 li:hover {
     background: white;
     color: black;
-    border-radius: 8px;
 }
 
 body {
@@ -73,20 +72,25 @@ body {
 
 .infoimg
 {
-    width: 250px;
+    width: 40%;
 /*
-    -webkit-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 93px 0px rgba(0,0,0,0.75);*/
-	box-shadow: 10px 10px 53px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 5px 33px -12px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 33px -12px rgba(0,0,0,0.75);*/
+	box-shadow: 5px 5px 33px -12px rgba(0,0,0,0.75);
 }
 
 p {
-    font-family: 'REM', sans-serif;
+    
     font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Slab', serif;
+    
     text-align: justify;
     
     line-height: 1.8em;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+
 }
 
 h2 {
@@ -94,7 +98,8 @@ h2 {
 }
 
 .titulo {
-    display: flex;
+    display:grid;
+    grid-template-columns: 4fr 1fr;
     align-items: center;
     margin-bottom: 40px;
 }
