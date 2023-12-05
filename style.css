@@ -99,8 +99,8 @@ h2 {
         display: inline-block;
         min-width: min-content;
         background: white;
-        margin-left: 1%;
-        margin-right: 1%; 
+        width: 96%;
+        margin-left: 2%; 
     }
 
     .infointerv {
