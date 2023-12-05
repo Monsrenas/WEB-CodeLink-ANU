@@ -7,23 +7,29 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cubo3d.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body style="margin: 0px;">
 
-    <div style="display: grid; grid-template-columns:  10% 90% ">
+    <nav style="display: grid; grid-template-columns:  10% 90% ">
+
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
         <div style="display: grid; grid-row: auto; text-align: center; gap: 4px;">
             <img src="LogoANU.svg" style="background: white; margin: 0 auto; margin-top: 4px; border-radius: 10%; padding: 1px;" width="80" alt="">
                 <span style="font-size: .68em; text-align: center; color: #47bce7; text-shadow: none;">CodeLink ANU</span>
         </div>    
         
         <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
         
-    </div>
+    </nav>
 
     <div class="contenedor"> 
         <!--

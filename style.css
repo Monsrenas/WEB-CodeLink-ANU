@@ -1,27 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lora:wght@700&family=REM:ital,wght@0,800;1,800&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap');
-ul {
-    height: 100px;
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    list-style:none;
-    font-family: 'Anton', sans-serif;
-    font-weight: bold;
-    font-size: 1.4em;    
-    color: white;
-/*    text-shadow: 0 0 0.2em #388ea7, 0 0 0.2em #388ea7,
-		0 0 0.2em #388ea7;
-background-color: rgba(255, 255, 255, 0.2);*/
-}
-
-li {
-    padding: .4em 2em .2em ;
-}
-
-li:hover {
-    background: white;
-    color: black;
-}
 
 body {
         background-image:  url("bg2.jpeg");  
@@ -31,6 +8,7 @@ body {
         background-attachment: fixed;
         width: 100vw;
     }
+
 .content {
     display: inline-block;
     justify-content: center;
@@ -51,10 +29,9 @@ body {
 
 .information {
     display: inline-block;
-    min-width: min-content;
+    width: 92%;
     background: white;
-    margin-left: 1%;
-    margin-right: 1%; 
+    margin-left: 4%;
 }
 
 .infointerv {
@@ -62,13 +39,12 @@ body {
     display: inline-block ; 
     margin-bottom: 80px;
     float: none;
-    width: 47%;
-    padding: 2px;
+    width: 90%;
+    padding: 14px;
     margin: 10px;
+    background: white;
 }
 
-.infointerv:nth-child(2n) {
-    float: right;  }
 
 .infoimg
 {
@@ -80,7 +56,7 @@ body {
 }
 
 p {
-    
+    max-width: fit-content;
     font-family: 'Roboto', sans-serif;
     
     text-align: justify;
@@ -105,9 +81,155 @@ h2 {
 }
 
 .titulo img {
-    display: block;
+    display: none;
+
+}
+
+.separator
+{
+	margin-top : 10px;
+	border : 1px solid #C3C3C3;
+}
+
+
+/* media query*/
+@media screen and (min-width:900px) {
+    
+    .information {
+        display: inline-block;
+        min-width: min-content;
+        background: white;
+        margin-left: 1%;
+        margin-right: 1%; 
+    }
+
+    .infointerv {
+
+        display: inline-block ; 
+        margin-bottom: 80px;
+        float: none;
+        width: 47%;
+        padding: 2px;
+        margin: 10px;
+    }
+
+    .infointerv:nth-child(2n) {
+        float: right;  }
+
+        .titulo img {
+            display: block;
+            float: right;
+            width: 40px;
+            margin: 6px;
+            opacity: 35%;
+        }
+}
+
+
+
+
+/*MENU*/
+
+nav{
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    
+    align-content: right;
+    text-align: right;
     float: right;
-    width: 40px;
-    margin: 6px;
-    opacity: 35%;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+    
+        align-content: center;
+        text-align: center;
+        float: right;
+        margin-right: 20px;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -110%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
 }
