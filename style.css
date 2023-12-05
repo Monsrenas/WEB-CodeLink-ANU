@@ -156,16 +156,24 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #fff;
-    font-size: 28px;
+    font-size: 1.8em;
     font-family: 'Anton', sans-serif;
-    font-weight: bold;
+    
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    text-shadow:
+    -1px -1px 3px #999,
+    0 0 1px darkred,
+    1px 1px 1px red,
+    2px 2px 1px #555,
+    3px 3px 1px #222,
+    4px 4px 1px #000;
 }
 li a.active, li a:hover{
-    background: #000090;
+    background: #3087a2;
     transition: .5s;
+    text-shadow:none;
 }
 .checkbtn{
     font-size: 30px;
